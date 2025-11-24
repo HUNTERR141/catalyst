@@ -19,3 +19,36 @@ Catalyst coordinates multiple specialized agents to:
 🔔 Send reminders & learning nudges
 <br>
 Catalyst is modular, extensible, and ADK-native, designed for real production agent workflows.
+
+🧠 Problem This Project Solves
+
+Traditional learning plans fail because:
+
+-Learners lose consistency
+
+-Don’t know what to study next
+
+-Cannot track progress
+
+-Overwhelmed by content
+
+-No personalized adaptive system
+
+This Personal Learning Coach solves this with:
+
+-Adaptive planning
+
+-AI-generated study paths
+
+-Session memory
+
+-Daily task breakdown
+
+-Automatic progress updates
+
+
+
+🤝 Contributing
+
+Pull requests are welcome!
+If you want help adding new agents or tools, drop an issue.
