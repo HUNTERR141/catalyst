@@ -1,0 +1,22 @@
+1. Clone your project
+    git clone https://github.com/HUNTERR141/catalyst.git
+    cd catalyst
+
+2. Create and activate a virtual environment
+    python -m venv .venv 
+    On Windows use `venv\Scripts\activate`
+
+3. Install dependencies
+    pip install google-adk
+
+4. Set up environment variables
+    Create a .env file in the project root with the following content:
+    GOOGLE_GENAI_USE_VERTEXAI=0
+    GOOGLE_API_KEY=your_google_api_key
+    
+5. Run the application
+    adk web
+    
+    (for dirctly orchestrator)
+    adk run orchestrator_agent  
+    python orchestrator_agent.py      
