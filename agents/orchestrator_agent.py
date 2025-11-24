@@ -1,4 +1,3 @@
-
 from google.adk.agents.llm_agent import LlmAgent
 from google.adk.tools.agent_tool import AgentTool
 
@@ -6,7 +5,6 @@ from agents.planner_agent import planner
 from agents.tutor_agent import tutor
 from agents.evaluator_agent import evaluator
 from agents.quiz_agent import quiz
-
 
 
 def orchestrator():
@@ -53,12 +51,10 @@ and tell the user exactly what you are assuming.
 Your tone should be helpful, encouraging, and supportive.
 """
 
-
-    planner_tool=AgentTool(planner())
-    tutor_tool=AgentTool(tutor())
-    quiz_tool=AgentTool(quiz())     
-    evaluator_tool=AgentTool(evaluator())  
-
+    planner_tool = AgentTool(planner())
+    tutor_tool = AgentTool(tutor())
+    quiz_tool = AgentTool(quiz())     
+    evaluator_tool = AgentTool(evaluator())  
 
     return LlmAgent(
         name="orchestrator_agent",
@@ -69,5 +65,5 @@ Your tone should be helpful, encouraging, and supportive.
            tutor_tool,
            quiz_tool,
            evaluator_tool,
-        ],             
+        ],            
     )

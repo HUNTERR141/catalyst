@@ -1,9 +1,7 @@
-
 from google.adk.agents.llm_agent import LlmAgent
- 
 
 def planner():
-        instructions = """You are an expert Study Planner agent.
+    instructions = """You are an expert Study Planner agent.
 
 Your role is to create comprehensive, personalized study plans for students.
 
@@ -29,9 +27,8 @@ Output format:
 
 Be encouraging and motivating in your tone."""
 
-        return LlmAgent(
-            name="planner_agent",
-            model="gemini-2.5-flash",
-            instruction=instructions,
-        
+    return LlmAgent(
+        name="planner_agent",
+        model="gemini-2.5-flash",
+        instruction=instructions,
     )

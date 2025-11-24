@@ -1,5 +1,4 @@
-
-from google.adk.agents import LlmAgent
+from google.adk.agents.llm_agent import LlmAgent
 
 
 def evaluator():

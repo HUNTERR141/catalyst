@@ -1,0 +1,24 @@
+A binary tree is a hierarchical data structure where each node has at most two children, referred to as the left child and the right child.
+A binary tree is a hierarchical data structure where each node has at most two children, referred to as the left child and the right child.
+## Binary Trees - Key Concepts
+
+### Definition:
+*   A hierarchical data structure where each node has at most two children: a left child and a right child.
+*   "Binary" refers to the 'at most two children' rule.
+
+### Core Terminology:
+1.  **Node**: Each element in the tree, containing data and pointers to children.
+2.  **Root**: The topmost node; has no parent.
+3.  **Parent**: A node with one or two children.
+4.  **Child**: A node directly connected one level below its parent (left or right).
+5.  **Leaf Node**: A node with no children.
+6.  **Subtree**: A node and all its descendants forming a smaller tree.
+7.  **Edge**: The connection between a parent and child node.
+8.  **Depth of a Node**: Number of edges from the root to the node (root depth is 0).
+9.  **Height of a Tree**: Number of edges on the longest path from the root to a leaf.
+
+### Practical Applications:
+*   **Searching & Sorting**: Binary Search Trees (BSTs) for efficient data operations.
+*   **Expression Parsers**: Representing mathematical or logical expressions.
+*   **Database Indexing**: Optimizing data retrieval.
+*   **Heaps**: Implementing priority queues.
