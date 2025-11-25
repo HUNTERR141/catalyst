@@ -1,7 +1,5 @@
 
-from agents.orchestrator_agent import orchestrator
+from .agents.orchestrator_agent import orchestrator
 
-# def root_agent():
-#     return orchestrator()
-# agent = orchestrator()
-root_agent = orchestrator()
+def root_agent():
+    return orchestrator()
