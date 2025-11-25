@@ -1,6 +1,6 @@
 
 from google.adk.agents.llm_agent import LlmAgent
-from ..tools.notes_tool import NotesTool 
+from main.tools.notes_tool import NotesTool 
 
 def tutor():
     instructions = """You are an expert Tutor agent specializing in clear, educational explanations.

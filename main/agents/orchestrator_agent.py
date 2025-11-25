@@ -2,10 +2,10 @@
 from google.adk.agents.llm_agent import LlmAgent
 from google.adk.tools.agent_tool import AgentTool
 
-from .planner_agent import planner
-from .tutor_agent import tutor
-from .evaluator_agent import evaluator
-from .quiz_agent import quiz
+from main.agents.planner_agent import planner
+from main.agents.tutor_agent import tutor
+from main.agents.evaluator_agent import evaluator
+from main.agents.quiz_agent import quiz
 
 
 
