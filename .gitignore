@@ -2,4 +2,4 @@
 *.venv
 
 #environment variable
-*main/.env
+main/.env
