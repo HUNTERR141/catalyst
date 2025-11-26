@@ -5,6 +5,4 @@
 main/.env
 
 #python cache
-main/__pycache__
-agents/__pycache__
-tools/__pycache__
+__pycache__/
