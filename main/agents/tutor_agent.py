@@ -1,11 +1,7 @@
-
 from google.adk.agents.llm_agent import LlmAgent
-from main.tools.notes_tool import NotesTool 
 
 def tutor():
     instructions = """You are an expert Tutor agent specializing in clear, educational explanations.
-
-Your role is to teach concepts and answer student questions.
 
 When explaining a concept:
 1. Start with a simple, intuitive explanation
@@ -34,5 +30,4 @@ Always be patient, encouraging, and supportive."""
         name="tutor_agent",
         model="gemini-2.5-flash",
         instruction=instructions,
-        tools=[NotesTool()],
     )
