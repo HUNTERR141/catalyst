@@ -1,4 +1,4 @@
-#**🚀 Catalyst** 
+# Catalyst 
 — AI Learning Coach (Multi-Agent System using Google ADK v1.18)
 <br>
 Catalyst is a multi-agent AI system built using Google’s Agent Developer Kit (ADK) v1.18.
@@ -20,7 +20,7 @@ Catalyst coordinates multiple specialized agents to:
 <br>
 Catalyst is modular, extensible, and ADK-native, designed for real production agent workflows.
 
-🧠 Problem This Project Solves
+# Problem This Project Solves
 
 Traditional learning plans fail because:
 
