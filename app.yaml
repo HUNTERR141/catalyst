@@ -1,2 +1,2 @@
 version: 1
-entrypoint: main.agent:root_agent
+entrypoint: agent:root_agent
