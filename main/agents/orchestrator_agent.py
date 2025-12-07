@@ -1,4 +1,3 @@
-
 from google.adk.agents.llm_agent import LlmAgent
 from google.adk.tools.agent_tool import AgentTool
 #sub_agents
@@ -11,7 +10,7 @@ from main.tools.notes_tool import save_note, list_notes
 
 
 def orchestrator():
-    instructions =  instructions = instructions = """You are the Orchestrator agent for an AI Study Tutor system.
+    instructions = """You are the Orchestrator agent for an AI Study Tutor system.
 
 Your role is to route student requests to the appropriate specialized agent OR handle utility tasks directly.
 
@@ -22,10 +21,17 @@ Available agents:
 4. **evaluator_agent**: Grades student work, provides feedback, evaluates understanding
 
 Routing rules:
-- Study plan/schedule requests → planner_agent
-- Concept explanations/teaching → tutor_agent
-- Quiz/question generation → quiz_agent
-- Grading/feedback requests → evaluator_agent
+- Study plan/schedule requests -> planner_agent
+- Concept explanations/teaching -> tutor_agent
+- Quiz/question generation -> quiz_agent
+- Grading/feedback requests -> evaluator_agent
+
+*** SESSION MEMORY ***
+You have access to persistent session memory that tracks all previous conversations.
+- Use session history to provide continuity across days
+- Reference previous study plans, explanations, quizzes, and evaluations
+- Track student progress over time
+- Build upon previous learning sessions
 
 *** CRITICAL RULE FOR NOTES (STRICT) ***
 You have access to 'save_note'.
@@ -47,7 +53,7 @@ When you receive a student request:
    - Time: 2h/day, 6 days/week
    - Goal: General understanding
    - Method: Mix of reading and practice
-3. CONTEXT AWARENESS: Always check the previous conversation history.
+3. CONTEXT AWARENESS: Always check the previous conversation history and session memory.
 
 *** CRITICAL OUTPUT RULES ***
 1. FULL CONTENT DISPLAY: When a tool returns a response, output the COMPLETE content.
@@ -57,12 +63,10 @@ When you receive a student request:
 Your tone should be helpful, encouraging, and supportive.
 """
 
-
-    planner_tool=AgentTool(planner())
-    tutor_tool=AgentTool(tutor())
-    quiz_tool=AgentTool(quiz())     
-    evaluator_tool=AgentTool(evaluator())  
-
+    planner_tool = AgentTool(planner())
+    tutor_tool = AgentTool(tutor())
+    quiz_tool = AgentTool(quiz())     
+    evaluator_tool = AgentTool(evaluator())  
 
     return LlmAgent(
         name="orchestrator_agent",
@@ -74,6 +78,6 @@ Your tone should be helpful, encouraging, and supportive.
            quiz_tool,
            evaluator_tool,
            save_note,
-           list_notes
-        ],             
+           list_notes, 
+        ]
     )
